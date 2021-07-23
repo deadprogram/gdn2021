@@ -1,10 +1,14 @@
-module github.com/hybridgroup/fosdem2021/scannerble
+module github.com/hybridgroup/gdn2021/scannerble
 
 go 1.15
 
 require (
-	tinygo.org/x/bluetooth v0.2.1-0.20210201231738-27cc35a60b53
-	tinygo.org/x/drivers v0.14.1-0.20210131100942-d6408374ed06
-	tinygo.org/x/tinyfont v0.2.1 // indirect
-	tinygo.org/x/tinyterm v0.0.0-20210131125732-23846e704bed
+	github.com/go-ole/go-ole v1.2.5 // indirect
+	github.com/godbus/dbus/v5 v5.0.4 // indirect
+	github.com/muka/go-bluetooth v0.0.0-20210508070623-03c23c62f181 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
+	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
+	tinygo.org/x/bluetooth v0.3.1-0.20210721201858-ab40fc77fecd
+	tinygo.org/x/drivers v0.15.1
+	tinygo.org/x/tinyterm v0.1.0
 )

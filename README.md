@@ -1,8 +1,8 @@
 # Go Without Wires
 
-## FOSDEM 2021
+## GDN 2021
 
-View slides online at https://deadprogram.github.io/fosdem-2021
+View slides online at https://deadprogram.github.io/gdn-2021
 
 Copyright 2018-2021 Ron Evans.
 

@@ -43,7 +43,7 @@ func startHeartbeat() {
 	nextBeat := time.Now()
 	for {
 		nextBeat = nextBeat.Add(time.Minute / time.Duration(heartRate))
-		println("tick", time.Now().Format("04:05.000"))
+		showPulse()
 		time.Sleep(nextBeat.Sub(time.Now()))
 
 		// random variation in heartrate

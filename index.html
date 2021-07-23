@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>Go Without Wires - FOSDEM 2021</title>
+<title>Go Without Wires - GDN 2021</title>
 
 <meta name="description" content="TinyGo">
 <meta name="author" content="Ron Evans">
@@ -40,7 +40,7 @@
 		<section>
 			<section>
 				<h1>Go Without Wires</h1>
-				<h2>FOSDEM 2021</h2>
+				<h2>TinyGo Minicon 2021</h2>
 				<h2>Ron Evans - @deadprogram</h2>
 			</section>
 		</section>
@@ -100,24 +100,16 @@
 		</section>
 
 		<section>
-			<h2>With support from</h2>
-		</section>
-	
-		<section>
 			<div class="image-container">
-			  <img src="images/google-logo.jpg">
+				<img src="images/tin-can-telephone.jpg">
 			</div>
-		</section>
-
-		<section>
-			<h2>and you</h2>
-		</section>
-
-		<section>
 			<h2>Wireless Networking</h2>
 		</section>
 
 		<section>
+			<div class="image-container">
+				<img src="images/gopher-eyes-closeup.png">
+			</div>
 			<h2>Wireless Personal Area Network</h2>
 			<h2>(WPAN)</h2>
 		</section>
@@ -132,7 +124,7 @@
 			<div class="image-container">
 				<img src="images/gobluetooth.png">
 			</div>
-			<p>Go Bluetooth</p>
+			<h2>Go Bluetooth</h2>
 		</section>
 
 		<section>          
@@ -144,11 +136,12 @@
 			</section>
 			<section>
 				<h2>Windows 10</h2>
-				<h3>(needs work)</h3>
+				<h3>(minimal support, needs work)</h3>
 			</section>
 			<section>
-				<h2>Nordic Semi Softdevice</h2>
+				<h2>Bare Metal</h2>
 				<h3>Microcontrollers</h3>
+				<h3>Nordic Semiconductor "Softdevice"</h3> 
 			</section>
 		</section>
 
@@ -170,7 +163,7 @@
 
 		<section>          
 			<section>
-				<h2>Which Bluetooth?</h2>
+				<h2>Which Bluetooth Is For you?</h2>
 			</section>
 			<section>
 				<h2>Bluetooth Low Energy</h2>
@@ -191,7 +184,7 @@
 			<div class="image-container">
 				<img src="images/ble-protocol-stack.gif">
 			</div>
-			<p>(via Sparkfun)</p>
+			<p>BLE Stack (via Sparkfun)</p>
 		</section>
 
 		<section>
@@ -199,13 +192,13 @@
 		</section>
 
 		<section>
-			<h2>Centrals</h2>			
-		</section>
-  
-		<section>
 			<h2>Peripherals</h2>
 		</section>
 
+		<section>
+			<h2>Centrals</h2>			
+		</section>
+  
 		<section>
 			<div class="image-container">
 				<img src="images/microcontrollers_ConnectedTopology.png">
@@ -214,172 +207,17 @@
 		</section>
 		
 		<section>
-			<h2>How Centrals find Peripherals</h2>
+			<h2>Generic Access Protocol (GAP)</h2>
+		</section>
+
+		<section>
+			<h2>When Peripherals Want To Be Found...</h2>
 		</section>
 
 		<!-- demo 1 -->
 		<section>
 			<section>
-				<h2>Scanning</h2>
-			</section>
-
-			<section>
-				<h2>Code</h2>
-			</section>
-
-			<section>
-				<h2>Demo</h2>
-			</section>
-		</section>		
-
-		<section>
-			<h2>Generic Access Protocol (GAP)</h2>
-		</section>
-
-		<section>
-			<h2>How Peripherals Are Found</h2>
-		</section>
-
-		<!-- demo 2 -->
-		<section>
-			<section>
-				<h2>Advertising</h2>
-			</section>
-
-			<section>
-				<h2>Adafruit Circuit Playground Bluefruit</h2>
-				<h3>Nordic Semiconductor nrf52840</h3>
-				<h3>32-bit processor</h3>
-				<h3>64 Mhz Cortex-M4</h3>
-				<h3>1024K Flash</h3>
-			</section>
-
-			<section>
-				<h2>Code</h2>
-			</section>
-
-			<section>
-				<h2>Demo</h2>
-			</section>
-		</section>
-
-		<!-- demo 3 -->
-		<section>
-			<section>
-				<h2>Scanning - TinyGo</h2>
-			</section>
-
-			<section>
-				<h2>Adafruit Clue</h2>
-				<h3>Nordic Semiconductor nrf52840</h3>
-				<h3>32-bit processor</h3>
-				<h3>64 Mhz Cortex-M4</h3>
-				<h3>1MB Flash</h3>
-				<h3>Built-in ST7789 SPI Display</h3>
-			</section>
-
-			<section>
-				<h2>Code</h2>
-			</section>
-
-			<section>
-				<h2>Demo</h2>
-			</section>
-		</section>
-
-		<section>
-			<h2>And then they connect</h2>
-		</section>
-
-		<section>
-			<h2>Connections are exclusive</h2>
-		</section>
-
-		<section>
-			<h2>Once we're connected, then what?</h2>
-		</section>
-
-		<section>
-			<h2>What data do you have?</h2>
-		</section>
-
-		<section>
-			<h2>Generic Attribute Protocol (GATT)</h2>
-		</section>
-
-		<section>
-			<div class="image-container">
-				<img src="images/microcontrollers_GattStructure.png">
-			</div>
-			<p>(via Adafruit)</p>
-		</section>
-
-		<section>
-			<section>
-				<h2>Characteristics</h2>
-			</section>
-			<section>
-				<h2>Characteristic UUID</h2>
-			</section>
-			<section>
-				<h2>Actual Data</h2>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Services</h2>
-			</section>
-			<section>
-				<h2>Service UUID</h2>
-			</section>
-			<section>
-				<h2>List of characteristics</h2>
-			</section>
-		</section>
-
-		<!-- demo 4 -->
-		<section>
-			<section>
-				<h2>Discovery</h2>
-			</section>
-
-			<section>
-				<h2>Code</h2>
-			</section>
-
-			<section>
-				<h2>Demo</h2>
-			</section>
-		</section>
-
-		<section>
-			<h2>Bluetooth SIG</h2>
-		</section>
-
-		<section>
-			<h2>Well-known Services/Characteristics UUIDs</h2>
-		</section>
-
-		<section>
-			<h2>Battery Service</h2>
-			<h3>0x180F</h3>
-		</section>
-
-		<section>
-			<h2>Location and Navigation Service</h2>
-			<h3>0x1819</h3>
-		</section>
-
-		<section>
-			<h2>Heart Rate Service</h2>
-			<h3>0x180D</h3>
-		</section>
-
-		<!-- demo 5 -->
-		<section>
-			<section>
-				<h2>Heart Rate Sensor</h2>
+				<h2>They Advertise</h2>
 			</section>
 
 			<section>
@@ -399,7 +237,142 @@
 			</section>
 		</section>
 
-		<!-- demo 6 -->
+		<section>
+			<h2>When Centrals are looking for Peripherals...</h2>
+		</section>
+
+		<!-- demo 2 -->
+		<section>
+			<section>
+				<h2>They Scan</h2>
+			</section>
+
+			<section>
+				<h2>Code</h2>
+			</section>
+
+			<section>
+				<h2>Demo - Linux</h2>
+			</section>
+
+			<section>
+				<h2>Demo - Clue</h2>
+			</section>
+		</section>		
+
+		<section>
+			<h2>And then...</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/kissing-mammals.jpg">
+			</div>
+			<h2>They connect</h2>
+		</section>
+
+		<section>
+			<h2>There is no actual contact between Centrals and Peripherals.</h2>
+		</section>
+
+		<section>
+			<h2>Connections are exclusive</h2>
+		</section>
+
+		<section>
+			<h2>The big question...</h2>
+		</section>
+
+		<section>
+			<h2>What data do you have?</h2>
+		</section>
+
+		<section>
+			<h2>Generic Attribute Protocol (GATT)</h2>
+		</section>
+
+		<section>
+			<section>
+				<h2>Services</h2>
+			</section>
+			<section>
+				<h2>Service UUID</h2>
+			</section>
+			<section>
+				<h2>List of characteristics</h2>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Characteristics</h2>
+			</section>
+			<section>
+				<h2>Characteristic UUID</h2>
+			</section>
+			<section>
+				<h2>Actual Data</h2>
+			</section>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/microcontrollers_GattStructure.png">
+			</div>
+			<p>(via Adafruit)</p>
+		</section>
+
+		<section>
+			<h2>Discovery</h2>
+		</section>
+
+		<section>
+			<h2>Well-known Services/Characteristics UUIDs</h2>
+		</section>
+
+		<section>
+			<h2>Bluetooth SIG</h2>
+		</section>
+
+		<section>
+			<h2>Battery Service</h2>
+			<h3>0x180F</h3>
+		</section>
+
+		<section>
+			<h2>Location and Navigation Service</h2>
+			<h3>0x1819</h3>
+		</section>
+
+		<section>
+			<h2>Heart Rate Service</h2>
+			<h3>0x180D</h3>
+		</section>
+
+		<!-- demo 3 -->
+		<section>
+			<section>
+				<h2>Heart Rate Sensor</h2>
+			</section>
+
+			<section>
+				<h2>Adafruit Circuit Playground Bluefruit</h2>
+				<h3>Nordic Semiconductor nrf52840</h3>
+				<h3>32-bit processor</h3>
+				<h3>64 Mhz Cortex-M4</h3>
+				<h3>1024K Flash</h3>
+			</section>
+
+			<section>
+				<h2>Code</h2>
+			</section>
+
+			<section>
+				<h2>Demo</h2>
+			</section>
+		</section>
+
+		<!-- demo 5 -->
 		<section>
 			<section>
 				<h2>Heart Rate Monitor</h2>
@@ -427,7 +400,7 @@
 			<h2>Like drones</h2>
 		</section>
 
-		<!-- demo 7 -->
+		<!-- demo 6 -->
 		<section>
 			<section>
 				<h2>TinyGo Flight Controller</h2>
@@ -447,16 +420,32 @@
 			</section>
 
 			<section>
-				<h2>Code</h2>
+				<h2><a href="https://github.com/hybridgroup/tinygo-minidrone/blob/main/minidrone.go">Drone Client Code</a></h2>
+			</section>
+
+			<section>
+				<h2>Controller Code</h2>
 			</section>
 
 			<section>
 				<h2>Demo</h2>
 			</section>
 		</section>
-		
+
+		<section>
+			<h2>In conclusion</h2>
+		</section>
+
         <section>
-			<h2>Connect all the things using Go</h2>
+			<h2>No contact?</h2>
+		</section>
+
+		<section>
+			<h2>No problem!</h2>
+		</section>
+
+        <section>
+			<h2>Just Go Without Wires</h2>
 		</section>
 
 		<section>

@@ -4,11 +4,12 @@ import (
 	"machine"
 	"time"
 
+	minidrone "github.com/hybridgroup/tinygo-minidrone"
 	"tinygo.org/x/bluetooth"
 )
 
 // replace this with the MAC address of the Parrot Minidrone you want to connect to.
-const deviceAddress = "E0:14:DC:85:3D:D1"
+var deviceAddress string //= "E0:14:DC:85:3D:D1"
 
 var (
 	// buttons
@@ -26,13 +27,13 @@ var (
 	yPos                                     uint16
 	b1push, b2push, b3push, b4push, bjoypush bool
 	leftX, leftY, rightX, rightY             int
+	droneconnected                           bool
 
 	adapter = bluetooth.DefaultAdapter
 	device  *bluetooth.Device
 	ch      = make(chan bluetooth.ScanResult, 1)
-	buf     = make([]byte, 255)
 
-	drone *Minidrone
+	drone *minidrone.Minidrone
 	speed = 20
 )
 
@@ -41,8 +42,8 @@ func main() {
 
 	initPins()
 
-	time.Sleep(time.Second)
 	go handleDisplay()
+	time.Sleep(3 * time.Second)
 
 	must("enable BLE interface", adapter.Enable())
 
@@ -56,15 +57,13 @@ func main() {
 		must("connect to peripheral device", err)
 
 		println("connected to ", result.Address.String())
+		droneconnected = true
 	}
 
 	defer device.Disconnect()
 
-	drone = NewMinidrone(device)
-	err = drone.Start()
-	if err != nil {
-		println(err)
-	}
+	drone = minidrone.NewMinidrone(device)
+	must("drone start", drone.Start())
 
 	go readControls()
 	controlDrone()
